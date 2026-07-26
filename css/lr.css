@@ -1,0 +1,305 @@
+/*==================================================
+                LOGIN / REGISTER PAGE
+==================================================*/
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,
+body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow:hidden;   /* instead of overflow-x:hidden */
+    scroll-behavior:smooth;
+}
+
+
+
+:root{
+    --bg:#070707;
+    --bg2:#101114;
+    --card:#15161b;
+    --glass:rgba(24,25,31,.72);
+    --border:rgba(255,255,255,.08);
+    --primary:#ff3b30;
+    --primary2:#ff6542;
+    --text:#ffffff;
+    --muted:#9ea0a8;
+    --shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    color:#fff;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,59,48,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(255,120,60,.06),
+        transparent 35%),
+
+        linear-gradient(
+        180deg,
+        #050505,
+        #0b0c10,
+        #111217,
+        #090909);
+}
+
+/* ========================= */
+
+.split-container{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+}
+
+/* LEFT SIDE */
+
+.brand-section{
+    width:50%;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,59,48,.10),
+        transparent 40%),
+        linear-gradient(180deg,#09090b,#111118);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo span{
+    font-size:30px;
+    font-weight:700;
+    color:#fff;
+}
+
+.brand-title{
+    font-size:72px;
+    font-weight:800;
+    line-height:1.05;
+}
+
+.brand-title .grey{
+    color:#9ea0a8;
+}
+
+.brand-subtitle{
+    color:#ff6b55;
+    letter-spacing:2px;
+}
+
+/* RIGHT SIDE */
+
+.form-section{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+}
+
+.glass-card{
+    width:100%;
+    max-width:470px;
+
+    background:rgba(20,20,25,.75);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+/* FORM */
+
+.custom-form-group{
+    margin-bottom:22px;
+}
+
+.custom-form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+    color:#fff;
+}
+
+.input-icon-wrapper{
+    position:relative;
+}
+
+.form-icon{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8f9098;
+    font-size:18px;
+}
+
+.custom-input{
+    background:rgba(255,255,255,.05)!important;
+    border:1px solid rgba(255,255,255,.10)!important;
+    color:#fff!important;
+
+    padding:14px 16px 14px 48px!important;
+    border-radius:14px!important;
+}
+
+.custom-input::placeholder{
+    color:#9ea0a8;
+}
+
+.custom-input:focus{
+    background:rgba(255,255,255,.08)!important;
+    border-color:#ff4b3c!important;
+    box-shadow:0 0 0 .2rem rgba(255,75,60,.20)!important;
+    color:#fff!important;
+}
+
+/* BUTTONS */
+
+.btn-auth-primary{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#ff3b30,#ff7340);
+    color:#fff;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-auth-primary:hover{
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(255,59,48,.30);
+}
+
+.btn-auth-outline{
+    width:100%;
+    padding:14px;
+
+    background:transparent;
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+.btn-auth-outline:hover{
+    background:rgba(255,255,255,.05);
+    color:#fff;
+}
+
+/* OR LINE */
+
+.hr-text{
+    position:relative;
+    text-align:center;
+    color:#8f9098;
+    margin:25px 0;
+}
+
+.hr-text::before,
+.hr-text::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:42%;
+    height:1px;
+    background:rgba(255,255,255,.08);
+}
+
+.hr-text::before{
+    left:0;
+}
+
+.hr-text::after{
+    right:0;
+}
+
+/* ALERT */
+
+.success-message{
+    margin-bottom:20px;
+    padding:12px 16px;
+
+    border-radius:12px;
+
+    background:rgba(0,180,90,.15);
+    border:1px solid rgba(0,180,90,.35);
+
+    color:#7cf2b0;
+}
+
+.form-check-label,
+.text-muted{
+    color:#9ea0a8!important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:992px){
+
+    .split-container{
+        flex-direction:column;
+    }
+
+    .brand-section,
+    .form-section{
+        width:100%;
+    }
+
+    .brand-section{
+        text-align:center;
+        padding:50px 30px;
+    }
+
+    .logo{
+        justify-content:center;
+    }
+
+    .brand-title{
+        font-size:48px;
+    }
+
+    .form-section{
+        padding:30px;
+    }
+
+    .glass-card{
+        padding:35px 25px;
+    }
+}
+
