@@ -1,8 +1,16 @@
-/*==================================================
-                LOGIN / REGISTER PAGE
-==================================================*/
+/* =========================================
+   LOGIN / REGISTER PAGE
+========================================= */
 
-/* RESET */
+/*
+   Structure: theme and base styles, shared layout and components,
+   page-specific overrides, then responsive rules.
+   Rule order is preserved intentionally to keep the existing cascade intact.
+*/
+
+/* =========================================
+   RESET
+========================================= */
 *{
     margin:0;
     padding:0;
@@ -17,8 +25,6 @@ body{
     overflow:hidden;   /* instead of overflow-x:hidden */
     scroll-behavior:smooth;
 }
-
-
 
 :root{
     --bg:#070707;
@@ -54,7 +60,9 @@ body{
         #090909);
 }
 
-/* ========================= */
+/* =========================================
+   
+========================================= */
 
 .split-container{
     display:flex;
@@ -62,7 +70,9 @@ body{
     min-height:100vh;
 }
 
-/* LEFT SIDE */
+/* =========================================
+   LEFT SIDE
+========================================= */
 
 .brand-section{
     width:50%;
@@ -111,7 +121,9 @@ body{
     letter-spacing:2px;
 }
 
-/* RIGHT SIDE */
+/* =========================================
+   RIGHT SIDE
+========================================= */
 
 .form-section{
     width:50%;
@@ -136,7 +148,9 @@ body{
     box-shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
-/* FORM */
+/* =========================================
+   FORM
+========================================= */
 
 .custom-form-group{
     margin-bottom:22px;
@@ -182,7 +196,9 @@ body{
     color:#fff!important;
 }
 
-/* BUTTONS */
+/* =========================================
+   BUTTONS
+========================================= */
 
 .btn-auth-primary{
     width:100%;
@@ -222,7 +238,9 @@ body{
     color:#fff;
 }
 
-/* OR LINE */
+/* =========================================
+   OR LINE
+========================================= */
 
 .hr-text{
     position:relative;
@@ -249,7 +267,9 @@ body{
     right:0;
 }
 
-/* ALERT */
+/* =========================================
+   ALERT
+========================================= */
 
 .success-message{
     margin-bottom:20px;
@@ -268,7 +288,9 @@ body{
     color:#9ea0a8!important;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width:992px){
 
@@ -302,4 +324,3 @@ body{
         padding:35px 25px;
     }
 }
-
